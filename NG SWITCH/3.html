@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html ng-app="LibraryApp">
+<head>
+<title>Library Book Genres</title>
+<script
+src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body background="https://cdn.pixabay.com/photo/2017/05/29/16/41/background-2354151_640.jpg">
+<center><h1><i>SELECT BOOK GENRE</i></h1>
+<select ng-model="genreCtrl.selectGenre">
+<option value="Comedy">Comedy</option>
+<option value="Romance">Romance</option>
+<option value="Crime">Crime</option>
+<option value="Horror">Horror</option>
+<option value="Fantasy">Fantasy</option>
+
+</select>
+
+<div ng-switch="genreCtrl.selectGenre">
+<div ng-switch-when="Comedy">
+<h2>Comedy</h2>
+<p><b>Here in this comedy section of books,A comedy film is a category of film that emphasizes humor. These films are designed to amuse audiences and make them laugh. </b></p>
+<img src="https://celadonbooks.com/wp-content/uploads/2022/12/11-must-read.jpg" length="400" width="400">
+</div>
+<div ng-switch-when="Romance">
+<h2>Romance</h2>
+<p><b>Here in this Romance section of books, Romance books  involve romantic love stories recorded in visual media for broadcast in theatres or on television that focus on passion, emotion, and the affectionate romantic involvement of the main characters.</b></p>
+<img src="https://images.seattletimes.com/wp-content/uploads/2022/02/201531.jpg?d=780x824" length="300" width="300">
+</div>
+<div ng-switch-when="Crime">
+<h2>Crime</h2>
+<p><b>Here in this crime section of books, Crime films, in the broadest sense, is a film genre inspired by and analogous to the crime fiction literary genre. Films of this genre generally involve various aspects of crime and its detection. </b>
+</p>
+<img src="https://whatshotblog.com/wp-content/uploads/2022/08/Best-Mystery-Thriller-Books-of-all-Time.jpg "length="400" width="400">
+</div>
+<div ng-switch-when="Horror">
+<h2>Horror</h2>
+<p><b>Here in this horror section of books, you will often explore dark subject matter and may deal with transgressive topics or themes. </b>
+</p>
+<img src="https://fiverr-res.cloudinary.com/t_main1,q_auto,f_auto/gigs3/324800018/original/24b5fa57a628038491ee161261dd17bb00c4ffaf.jpg" length="400" width="400">
+</div>
+<div ng-switch-when="Fantasy">
+<h2>Fantasy</h2>
+<p><b>Here in this Fantasy section of books, Fantasy are books that belong to the fantasy genre with fantastic themes, usually magic, supernatural events, mythology, folklore, or exotic fantasy worlds.</b>
+<img src="https://i.pinimg.com/736x/fa/79/4f/fa794f11a06dd85469fa8ba4d4ad2c5f.jpg"length="250" width="250">
+</center>
+    <div ng-switch-default>
+<h3>Select a Genre</h3>
+<p>Please select a book genre to continue</p>
+</div>
+</div>
+</div>
+<script>
+angular.module('LibraryApp',[])
+.controller('GenreController',function(){
+var genreCtrl=this;
+genreCtrl.selectedGenre="";
+})
+</script>
+</body>
+</html>
+
+        

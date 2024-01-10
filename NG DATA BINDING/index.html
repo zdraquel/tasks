@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<title>Angular JS data binding</title>
+<script
+src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head><center>
+<body ng-controller="MyController as ctrl"background="https://cdn.pixabay.com/photo/2017/05/29/16/41/background-2354151_640.jpg"> 
+<h1>DATA BINDING</h1>
+<label for="FIRST NAME"> FIRST NAME:</label>
+<input type="text" ng-model="ctrl.message"><br><br>
+<label for="SECOND NAME">SECOND NAME:</label>
+<input type="text" ng-model="ctrl.message1">
+<p>{{ctrl.message}} {{ctrl.message1}}</p>
+<script>
+var app=angular.module('myApp',[]);
+app.controller('MyController',function(){
+this.message='';
+this.clearMessage=function(){
+this.message='';
+};
+});
+</script>
+</center>
+</body>
+</html>
